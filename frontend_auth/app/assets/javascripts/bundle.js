@@ -29367,6 +29367,10 @@ var _chirp_index_container = __webpack_require__(283);
 
 var _chirp_index_container2 = _interopRequireDefault(_chirp_index_container);
 
+var _signup_container = __webpack_require__(288);
+
+var _signup_container2 = _interopRequireDefault(_signup_container);
+
 var _home = __webpack_require__(286);
 
 var _home2 = _interopRequireDefault(_home);
@@ -29381,7 +29385,8 @@ exports.default = function () {
     null,
     _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _nav_bar_container2.default }),
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _home2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: '/chirps', component: _chirp_index_container2.default })
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/chirps', component: _chirp_index_container2.default }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _signup_container2.default })
   );
 };
 
@@ -29794,6 +29799,12 @@ exports.default = function () {
             return state;
     }
 };
+
+/***/ }),
+/* 288 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: SyntaxError: Unexpected token (5:25)\n\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mSignup\u001b[39m from \u001b[32m'./signup'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 4 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 | \u001b[39m\u001b[36mconst\u001b[39m mapDispatchToProps \u001b[33m=>\u001b[39m dispatch \u001b[33m=>\u001b[39m ({\n \u001b[90m   | \u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 | \u001b[39m    createNewUser\u001b[33m:\u001b[39m formUser \u001b[33m=>\u001b[39m dispatch(createNewUser(formUser))\n \u001b[90m 7 | \u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m 8 | \u001b[39m\u001b[0m\n");
 
 /***/ })
 /******/ ]);
