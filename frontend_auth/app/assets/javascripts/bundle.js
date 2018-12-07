@@ -25566,10 +25566,15 @@ var _entities = __webpack_require__(238);
 
 var _entities2 = _interopRequireDefault(_entities);
 
+var _session = __webpack_require__(287);
+
+var _session2 = _interopRequireDefault(_session);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
-  entities: _entities2.default
+  entities: _entities2.default,
+  session: _session2.default
 });
 
 /***/ }),
@@ -29756,6 +29761,38 @@ exports.default = function () {
       "Where birds can chirp."
     )
   );
+};
+
+/***/ }),
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _session = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"..actions/session\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _nullSession = {
+    currentUser: null
+};
+
+exports.default = function () {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _nullSession;
+    var action = arguments[1];
+
+    Object.freeze(state);
+    switch (action.type) {
+        case _session.RECEIVE_CURRENT_USER:
+            return Object.assign({}, { currentUser: action.user });
+        case _session.LOGOUT_CURRENT_USER:
+            return _nullSession;
+        default:
+            return state;
+    }
 };
 
 /***/ })
