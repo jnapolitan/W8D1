@@ -29956,6 +29956,8 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(62);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -30038,6 +30040,11 @@ var Signup = function (_React$Component) {
                         'button',
                         { onClick: this.handleSubmit },
                         'Sign Up'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/login', className: 'form-link-text' },
+                        'or log in'
                     )
                 )
             );
@@ -30096,7 +30103,7 @@ var Protected = function Protected(_ref2) {
     return _react2.default.createElement(_reactRouterDom.Route, {
         path: path,
         render: function render(props) {
-            return loggedIn ? _react2.default.createElement(Component, props) : _react2.default.createElement(_reactRouterDom.Redirect, { to: '/signup' });
+            return loggedIn ? _react2.default.createElement(Component, props) : _react2.default.createElement(_reactRouterDom.Redirect, { to: '/login' });
         }
     });
 };
@@ -30151,6 +30158,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(62);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30215,18 +30224,23 @@ var Signup = function (_React$Component) {
                         'label',
                         null,
                         'Username:',
-                        _react2.default.createElement('input', { type: 'text', value: this.state.username, onChange: this.handleInput('username') })
+                        _react2.default.createElement('input', { type: 'text', value: this.state.username, onChange: this.handleInput("username") })
                     ),
                     _react2.default.createElement(
                         'label',
                         null,
                         'Password:',
-                        _react2.default.createElement('input', { type: 'password', value: this.state.password, onChange: this.handleInput('password') })
+                        _react2.default.createElement('input', { type: 'password', value: this.state.password, onChange: this.handleInput("password") })
                     ),
                     _react2.default.createElement(
                         'button',
                         { onClick: this.handleSubmit },
-                        'Sign Up'
+                        'Log In'
+                    ),
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/signup', className: 'form-link-text' },
+                        'or sign up'
                     )
                 )
             );
