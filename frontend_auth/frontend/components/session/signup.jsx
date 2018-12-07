@@ -27,7 +27,7 @@ export default class Signup extends React.Component {
     render() {
         return (
             <div className="session-form">
-                <h2>Sig Up!</h2>
+                <h2>Sign Up!</h2>
                 <form>
                     <label>Username:
                         <input type="text" value={this.state.username} onChange={this.handleInput('username')}/> 

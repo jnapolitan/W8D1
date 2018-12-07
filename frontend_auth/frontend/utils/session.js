@@ -17,6 +17,6 @@ export const postSession = user => (
 export const deleteSession = () => (
     $.ajax({
         method: 'DELETE',
-        url: '/api/sessoin'
+        url: '/api/session'
     })
 );
