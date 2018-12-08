@@ -129,14 +129,18 @@ var createNewUser = function createNewUser(user) {
   return $.ajax({
     method: 'POST',
     url: '/api/users',
-    data: user
+    data: {
+      user: user
+    }
   });
 };
 var login = function login(user) {
   return $.ajax({
     method: 'POST',
     url: '/api/session',
-    data: user
+    data: {
+      user: user
+    }
   });
 };
 var logout = function logout() {
