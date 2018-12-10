@@ -11,6 +11,7 @@ export default (state = _nullSession, action) => {
         case RECEIVE_CURRENT_USER:
             return { id: action.user.id }
         case LOGOUT_CURRENT_USER:
+            console.log('logging out?');
             return _nullSession;
         default: 
             return state;

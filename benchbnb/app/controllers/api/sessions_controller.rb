@@ -17,6 +17,6 @@ class Api::SessionsController < ApplicationController
     def destroy
         raise ActionController::RoutingError.new('404 No User Found') unless logged_in?
         logout
-        return {}
+        render json: {}
     end
 end
