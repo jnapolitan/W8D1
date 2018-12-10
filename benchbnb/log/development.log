@@ -3499,3 +3499,124 @@ Processing by Api::SessionsController#destroy as */*
 Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 6.1ms)
 
 
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(456192024138762660)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBenches (20181210212253)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (64.3ms)[0m  [1m[35mCREATE TABLE "benches" ("id" bigserial primary key, "description" character varying NOT NULL, "lat" float NOT NULL, "lng" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181210212253_create_benches.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181210212253"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(456192024138762660)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mBench Load (31.7ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mBench Create (2.6ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "This is a bench!"], ["lat", 37.765349], ["lng", -122.452884], ["created_at", "2018-12-10 21:33:25.489954"], ["updated_at", "2018-12-10 21:33:25.489954"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBench Create (0.4ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "This is a bench!"], ["lat", 37.749843], ["lng", -122.447957], ["created_at", "2018-12-10 21:33:25.495574"], ["updated_at", "2018-12-10 21:33:25.495574"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mBench Create (1.9ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "This is a bench!"], ["lat", 37.784179], ["lng", -122.505083], ["created_at", "2018-12-10 21:33:25.497701"], ["updated_at", "2018-12-10 21:33:25.497701"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mBench Create (0.4ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "This is a bench!"], ["lat", 37.797461], ["lng", -122.432328], ["created_at", "2018-12-10 21:33:25.501427"], ["updated_at", "2018-12-10 21:33:25.501427"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mBench Create (0.3ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "This is a bench!"], ["lat", 37.757363], ["lng", -122.391175], ["created_at", "2018-12-10 21:33:25.503561"], ["updated_at", "2018-12-10 21:33:25.503561"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[36mBench Load (0.9ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+Started GET "/api/benches" for 127.0.0.1 at 2018-12-10 13:34:21 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jnapolitan/.rvm/gems/ruby-2.3.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::BenchesController#index as */*
+  Parameters: {"default"=>{"format"=>:json}}
+  [1m[36mBench Load (1.0ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/controllers/api/benches_controller.rb:5
+Completed 200 OK in 34ms (Views: 19.4ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/api/benches" for 127.0.0.1 at 2018-12-10 13:37:28 -0800
+Processing by Api::BenchesController#create as */*
+  Parameters: {"description"=>"This is another bench!", "lat"=>"37.759699", "lng"=>"-122.429188", "default"=>{"format"=>:json}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `requre' for #<ActionController::Parameters:0x007fcffa119528>
+Did you mean?  require
+               required:
+  app/controllers/api/benches_controller.rb:21:in `bench_params'
+  app/controllers/api/benches_controller.rb:9:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-12-10 13:37:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_pages/root.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 396ms (Views: 384.7ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/benches" for 127.0.0.1 at 2018-12-10 13:38:10 -0800
+Processing by Api::BenchesController#create as */*
+  Parameters: {"description"=>"This is another bench!", "lat"=>"37.759699", "lng"=>"-122.429188", "default"=>{"format"=>:json}}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: bench:
+  app/controllers/api/benches_controller.rb:21:in `bench_params'
+  app/controllers/api/benches_controller.rb:9:in `create'
+
+Started POST "/api/benches" for 127.0.0.1 at 2018-12-10 13:39:20 -0800
+Processing by Api::BenchesController#create as */*
+  Parameters: {"bench"=>{"description"=>"This is another bench!", "lat"=>"37.759699", "lng"=>"-122.429188"}, "default"=>{"format"=>:json}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/benches_controller.rb:11
+  [1m[36mBench Create (0.8ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "This is another bench!"], ["lat", 37.759699], ["lng", -122.429188], ["created_at", "2018-12-10 21:39:20.658385"], ["updated_at", "2018-12-10 21:39:20.658385"]]
+  ↳ app/controllers/api/benches_controller.rb:11
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/benches_controller.rb:11
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2018-12-10 13:39:34 -0800
+Processing by Api::BenchesController#index as */*
+  Parameters: {"default"=>{"format"=>:json}}
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/controllers/api/benches_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
