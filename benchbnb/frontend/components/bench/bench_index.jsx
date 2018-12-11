@@ -19,7 +19,7 @@ export default class BenchIndex extends React.Component {
         });
 
         return (
-            <div>
+            <div className="bench-idx">
                 <h1>All the benches</h1>
                 <ul>{benches}</ul>
             </div>

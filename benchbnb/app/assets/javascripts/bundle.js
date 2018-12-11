@@ -373,7 +373,9 @@ function (_React$Component) {
           bench: bench
         });
       });
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "All the benches"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, benches));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "bench-idx"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "All the benches"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, benches));
     }
   }]);
 
@@ -605,7 +607,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Search = function Search(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bench_bench_map__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bench-content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bench_bench_map__WEBPACK_IMPORTED_MODULE_1__["default"], {
     benches: props.benches
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bench_bench_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
     benches: props.benches,
